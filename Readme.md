@@ -1,3 +1,5 @@
+[![CI](https://github.com/andresgranizo/SaucedemoSerenity/actions/workflows/ci.yml/badge.svg)](https://github.com/andresgranizo/SaucedemoSerenity/actions/workflows/ci.yml)
+
 # SaucedemoSerenity
 
 This project is an end-to-end (E2E) automated test for the SauceDemo web application, using Serenity BDD with the Screenplay pattern and Gradle.
