@@ -15,7 +15,7 @@ This project is an end-to-end (E2E) automated test for the SauceDemo web applica
 ### 1. Clone the Repository
 
 ```bash
-git clone 
+git clone  https://github.com/andresgranizo/SaucedemoSerenity
 cd SaucedemoSerenity
 ```
 ## Import the Project into IntelliJ IDEA
