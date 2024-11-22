@@ -46,8 +46,10 @@ public class CheckoutTest {
     }
     @Test
     void userShouldBeAbleToCompletePurchase() {
+        String product1 = "Sauce Labs Backpack";
+        String product2 = "Sauce Labs Bike Light";
         givenThat(user).wasAbleTo(Login.withCredentials(USERNAME, PASSWORD));
-        when(user).attemptsTo(AddToCart.theProducts());
+        when(user).attemptsTo(AddToCart.theProducts(product1, product2));
         when(user).attemptsTo(ViewCart.content());
         when(user).attemptsTo(CompletePurchase.form("FirstName", "LastName", "12345"));
         String confirmationMessage = Text.of(CheckoutPage.THANK_YOU_MESSAGE).answeredBy(user);

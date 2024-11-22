@@ -1,9 +1,11 @@
 Feature: Checkout a product on SauceDemo
 
-  Scenario: Successful checkout
-    Given the user is on the login page
-    When the user logs in with valid credentials
-    And the user adds two products to the cart
-    And the user views the cart
-    And the user completes the checkout process
-    Then the user should see the confirmation message "THANK YOU FOR YOUR ORDER"
+  Scenario Outline: Successful checkout with multiple products
+    Given the user logs in with username "<username>" and password "<password>"
+    When the user adds products "<product1>" and "<product2>" to the cart
+    Then the user completes the purchase and sees the confirmation message "<confirmationMessage>"
+
+    Examples:
+      | username       | password     | product1             | product2             | confirmationMessage         |
+      | standard_user  | secret_sauce | Sauce Labs Backpack  | Sauce Labs Bike Light | THANK YOU FOR YOUR ORDER    |
+      | standard_user  | secret_sauce | Test.allTheThings()  | Sauce Labs Fleece Jacket | THANK YOU FOR YOUR ORDER    |
