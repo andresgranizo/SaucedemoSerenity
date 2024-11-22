@@ -19,13 +19,13 @@ jobs:
         run: ./gradlew clean test
 
       - name: Archive Serenity Reports
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: serenity-reports
           path: target/site/serenity/
 
       - name: Archive Cucumber JSON Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: cucumber-reports
           path: target/cucumber.json
